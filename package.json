@@ -8,8 +8,8 @@
     "ml:server": "node src/ml/server.js",
     "ml:build:train": "node src/ml/build_prediction/train.js",
     "ml:build:server": "node src/ml/build_prediction/server.js",
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node api.js && vite",
+    "build": "node api.js && vite build",
     "build:analyze": "ANALYZE=1 vite build",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -48,7 +48,6 @@
     "@tensorflow/tfjs-node": "^5.0.0",
     "@sentry/browser": "8.54.0",
     "@sentry/react": "8.54.0",
-    "@tensorflow/tfjs-node": "^4.22.0",
     "express": "^4.18.2",
     "@axe-core/react": "^4.11.3",
     "@stellar/stellar-sdk": "^12.3.0",
@@ -61,7 +60,6 @@
     "d3-shape": "^3.2.0",
     "d3-time-format": "^4.1.0",
     "d3-zoom": "^3.0.0",
-    "express": "^4.18.2",
     "i18next": "^23.15.1",
     "i18next-browser-languagedetector": "^8.0.0",
     "idb": "^8.0.3",
@@ -81,7 +79,8 @@
   "optionalDependencies": {
     "@ledgerhq/hw-transport-webhid": "^6.29.4",
     "@ledgerhq/hw-transport-webusb": "^6.29.4",
-    "@stellar/ledger": "^1.0.0"
+    "@stellar/ledger": "^1.0.0",
+    "@tensorflow/tfjs-node": "4.22.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.0",
